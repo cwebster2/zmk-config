@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "skeletyl.dtsi"
+#include "tbkmini.dtsi"
 
 &kscan0 {
 	col-gpios
