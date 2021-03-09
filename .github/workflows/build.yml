@@ -33,30 +33,30 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Skeletyl Left)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=skeletyl_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Skeletyl DTS File
+      - name: West Build (Tbkmini Left)
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=tbkmini_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Tbkmini DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: Skeletyl Left Kconfig file
+      - name: Tbkmini Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 skeletyl_left_nice_nano.uf2
-      - name: Archive (Skeletyl Left)
+        run: cp build/zephyr/zmk.uf2 tbkmini_left_nice_nano.uf2
+      - name: Archive (Tbkmini Left)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: skeletyl_left_nice_nano.uf2
-      - name: West Build (Skeletyl Right)
-        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=skeletyl_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          path: tbkmini_left_nice_nano.uf2
+      - name: West Build (Tbkmini Right)
+        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=tbkmini_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
-      - name: Skeletyl Right Kconfig file
+      - name: Tbkmini Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 skeletyl_right_nice_nano.uf2
-      - name: Archive (Skeletyl Right)
+        run: cp build/zephyr/zmk.uf2 tbkmini_right_nice_nano.uf2
+      - name: Archive (Tbkmini Right)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: skeletyl_right_nice_nano.uf2
+          path: tbkmini_right_nice_nano.uf2
 
