@@ -11,7 +11,7 @@
 };
 
 &five_column_transform {
-  col-offset = <5>;
+	col-offset = <5>;
 };
 
 &kscan0 {
