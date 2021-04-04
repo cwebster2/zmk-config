@@ -62,7 +62,7 @@
 	&trans &reset   &trans   &trans    &trans     &kp K_LOCK   &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_AGAIN &trans
 	&trans &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp CAPS    &trans
 	&trans &trans   &trans   &trans    &trans     &trans       &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &kp INS     &trans
-	                  &trans   &trans   &trans                 &kp ENT &kp BSPC &kp DEL
+	                  &trans   &trans   &trans                 &kp RET &kp BSPC &kp DEL
             >;
         };
         mse_layer {
