@@ -45,7 +45,7 @@ jobs:
       - name: Archive (Tbkmini Left)
         uses: actions/upload-artifact@v2
         with:
-          name: tbkmini_5col_firmware
+          name: tbkmini_firmware
           path: tbkmini_left_nice_nano.uf2
       - name: West Build (Tbkmini Right)
         run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=tbkmini_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
@@ -57,7 +57,7 @@ jobs:
       - name: Archive (Tbkmini Right)
         uses: actions/upload-artifact@v2
         with:
-          name: tbkmini_5col_firmware
+          name: tbkmini_firmware
           path: tbkmini_right_nice_nano.uf2
 
 
