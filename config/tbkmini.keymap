@@ -60,7 +60,7 @@
         nav_layer {
             bindings = <
 	&trans &reset   &trans   &trans    &trans     &kp K_LOCK   &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_AGAIN &trans
-	&trans &kp LGUI &kp LATL &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp CAPS    &trans
+	&trans &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp CAPS    &trans
 	&trans &trans   &trans   &trans    &trans     &trans       &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &kp INS     &trans
 	                  &trans   &trans   &trans                 &kp ENT &kp BSPC &kp DEL
             >;
@@ -68,7 +68,7 @@
         mse_layer {
             bindings = <
 	&trans &reset   &trans   &trans    &trans     &kp K_LOCK   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans
-	&trans &kp LGUI &kp LATL &kp LCTRL &kp LSHFT &trans       &trans &trans &trans &trans &trans &trans
+	&trans &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &trans &trans &trans &trans &trans
 	&trans &trans   &trans   &trans    &trans     &trans       &trans &trans &trans &trans &bt BT_CLR &trans
 	                  &trans   &trans   &trans                 &trans &trans &trans
             >;
@@ -76,7 +76,7 @@
         med_layer {
             bindings = <
 	&trans &reset   &trans   &trans    &trans     &kp K_LOCK   &trans &trans     &trans       &trans       &trans     &trans
-	&trans &kp LGUI &kp LATL &kp LCTRL &kp LSHFT &trans       &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
+	&trans &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
 	&trans &trans   &trans   &trans    &trans     &trans       &trans &trans     &trans       &trans       &trans     &trans
 	                  &trans   &trans   &trans                 &kp K_STOP2 &kp K_PP &kp K_MUTE
             >;
