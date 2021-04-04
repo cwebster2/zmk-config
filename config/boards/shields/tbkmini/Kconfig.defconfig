@@ -15,7 +15,7 @@ config ZMK_KEYBOARD_NAME
 
 endif
 
-if SHIELD_TBKMINI_LEFT || SHIELD_tbkmini_RIGHT
+if SHIELD_TBKMINI_LEFT || SHIELD_TBKMINI_RIGHT
 
 config ZMK_SPLIT
     default y
