@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Tbkmini Left)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=tbkmini_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config/tbkmini"
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=tbkmini_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Tbkmini DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
@@ -48,7 +48,7 @@ jobs:
           name: tbkmini_firmware
           path: tbkmini_left_nice_nano.uf2
       - name: West Build (Tbkmini Right)
-        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=tbkmini_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config/tbkmini"
+        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=tbkmini_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
       - name: Tbkmini Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
