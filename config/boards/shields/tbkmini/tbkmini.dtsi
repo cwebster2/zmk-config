@@ -32,7 +32,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                 RC(2,6) RC(2,7) 
 // | k11  | k12  | k13  | k14  | k15  |                  | k55  | k54  | k53  | k52  | k51  |
 // | k21  | k22  | k23  | k24  | k25  |                  | k65  | k64  | k63  | k62  | k61  |
 //               | k33  | k34  | k31  |                  | k71  | k74  | k73  |
-	skeletyl: keymap_transform_1 {
+	skeletyl_transform: keymap_transform_1 {
 		compatible = "zmk,matrix-transform";
 		columns = <10>;
 		rows = <4>;

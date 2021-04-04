@@ -12,7 +12,7 @@
 
 / {
   chosen {
-    zmk,matrix_transform = &skeletyl;
+    zmk,matrix_transform = &skeletyl_transform;
   };
 
   behaviors {
