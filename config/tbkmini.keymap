@@ -21,6 +21,15 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
         };
+      lm: homerow_mods {
+          compatible = "zmk,behavior-hold-tap";
+          label = "LAYER_MODS";
+          #binding-cells = <2>;
+          tapping-term-ms = <150>;
+          quick_tap_ms = <50>;
+          flavor = "hold-preferred";
+          bindings = <&kp>, <&kp>;
+        };
     };
   keymap {
         compatible = "zmk,keymap";
@@ -30,7 +39,7 @@
 	&trans &kp Q      &kp W      &kp F       &kp P        &kp B          &kp J &kp L        &kp U       &kp Y      &kp SQT    &trans
 	&trans &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T &kp G          &kp M &hm RSHFT N &hm RCTRL E &hm LALT I &hm RGUI O &trans
 	&trans &kp Z      &kp X      &kp C       &kp D        &kp V          &kp K &kp H        &kp COMMA   &kp DOT    &kp FSLH   &trans
-	                  &lt MSE ESC   &lt NAV SPACE   &lt MED TAB              &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
+	                  &lm MSE ESC   &lm NAV SPACE   &lm MED TAB              &lm FUN RET  &lm NUM BSPC  &lm SYM DEL
             >;
         };
         num_layer {
