@@ -8,7 +8,7 @@
 #include "tbkmini.dtsi"
 
 &skeletyl_transform {
-	col-offset = <1>;
+	col-offset = <-1>;
 };
 
 &kscan0 {
