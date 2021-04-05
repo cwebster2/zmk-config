@@ -11,7 +11,7 @@
 #define MED 6
 
 &mt {
-  tapping-term = <200>;
+  tapping-term-ms = <200>;
   quick_tap_ms = <50>;
   flavor = "hold-preferred";
 };
