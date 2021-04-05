@@ -14,7 +14,7 @@
   tapping-term = <200>;
   quick_tap_ms = <50>;
   flavor = "hold-preferred";
-}
+};
 
 / {
   chosen {
