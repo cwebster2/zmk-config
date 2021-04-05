@@ -10,7 +10,7 @@
 #define MSE 5
 #define MED 6
 
-&mt {
+&lt {
   tapping-term-ms = <200>;
   quick_tap_ms = <50>;
   flavor = "hold-preferred";
@@ -41,7 +41,7 @@
 	&kp Q      &kp W      &kp F       &kp P        &kp B          &kp J &kp L       &kp U       &kp Y      &kp SQT
 	&hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T  &kp G          &kp M &hm RSHFT N &hm RCTRL E &hm LALT I &hm RGUI O
 	&kp Z      &kp X      &kp C       &kp D        &kp V          &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH
-	           &mt MSE ESC   &mt NAV SPACE   &mt MED TAB          &mt FUN RET  &mt NUM BSPC  &mt SYM DEL
+	           &lt MSE ESC   &lt NAV SPACE   &lt MED TAB          &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
             >;
         };
         num_layer {
