@@ -10,6 +10,12 @@
 #define MSE 5
 #define MED 6
 
+&lt {
+  tapping-term-ms = <300>;
+  quick_tap_ms = <200>;
+  flavor = "hold-preferred";
+};
+
 / {
   chosen {
     zmk,matrix_transform = &skeletyl_transform;
@@ -34,15 +40,6 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-    lm: layertap_mods {
-      compatible = "zmk,behavior-hold-tap";
-      label = "LAYERTAP_MODS";
-      #binding-cells = <2>;
-      tapping-term-ms = <150>;
-      quick_tap_ms = <50>;
-      flavor = "hold-preferred";
-      bindings = <&kp>, <&kp>;
-    };
   };
 
   keymap {
@@ -53,7 +50,7 @@
 	&kp Q      &kp W      &kp F       &kp P       &kp B          &kp J &kp L       &kp U       &kp Y      &kp SQT
 	&hm LGUI A &hm LALT R &hm LCTRL S &hms LSHFT T &kp G          &kp M &hms RSHFT N &hm RCTRL E &hm LALT I &hm RGUI O
 	&kp Z      &kp X      &kp C       &kp D       &kp V          &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH
-	           &lm MSE ESC   &lm NAV SPACE   &lm MED TAB         &lm FUN RET  &lm NUM BSPC  &lm SYM DEL
+	           &lt MSE ESC   &lt NAV SPACE   &lt MED TAB         &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
             >;
         };
         num_layer {
