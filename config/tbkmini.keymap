@@ -24,10 +24,10 @@
   behaviors {
     hms: homerow_mods_shift {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
+      label = "HOMEROW_MODS_SHIFT";
       #binding-cells = <2>;
       tapping-term-ms = <150>;
-      quick_tap_ms = <0>;
+      quick_tap_ms = <100>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
@@ -36,7 +36,7 @@
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
       tapping-term-ms = <350>;
-      quick_tap_ms = <0>;
+      quick_tap_ms = <200>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
