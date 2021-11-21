@@ -32,25 +32,25 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-    lh_pht: left_hand_positional_hold_tap {
+    lm: left_hand_positional_hold_tap {
       compatible = "zmk,behavior-hold-tap";
-      label = "POSITIONAL_HOLD_TAP";
+      label = "LEFT_HOMEROW_MODS";
       #binding-cells = <2>;
       flavor = "tap-unless-interrupted";
-      tapping-term-ms = <100>;
+      tapping-term-ms = <200>;
       quick-tap-ms = <200>;
       bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+      hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
     };
-    rh_pht: right_hand_positional_hold_tap {
+    rm: right_hand_positional_hold_tap {
       compatible = "zmk,behavior-hold-tap";
-      label = "POSITIONAL_HOLD_TAP";
+      label = "RIGHT_HOMEROW_MODS";
       #binding-cells = <2>;
       flavor = "tap-unless-interrupted";
-      tapping-term-ms = <100>;
+      tapping-term-ms = <200>;
       quick-tap-ms = <200>;
       bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+      hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
     };
   };
 
@@ -59,10 +59,10 @@
 
         default_layer {
             bindings = <
-	&kp Q          &kp W          &kp F           &kp P           &kp B          &kp J &kp L           &kp U           &kp Y          &kp SQT
-	&lh_pht LGUI A &lh_pht LALT R &lh_pht LCTRL S &lh_pht LSHFT T &kp G          &kp M &rh_pht RSHFT N &rh_pht RCTRL E &rh_pht LALT I &rh_pht RGUI O
-	&kp Z          &kp X          &kp C           &kp D           &kp V          &kp K &kp H           &kp COMMA       &kp DOT        &kp FSLH
-	               &lt MSE ESC    &lt NAV SPACE   &lt MED TAB                          &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
+	&kp Q      &kp W        &kp F          &kp P       &kp B          &kp J  &kp L        &kp U        &kp Y       &kp SQT
+	&hm LGUI A &hm LALT R   &hm LCTRL S    &hm LSHFT T &kp G          &kp M  &hm RSHFT N  &hm RCTRL E  &hm LALT I  &hm RGUI O
+	&kp Z      &kp X        &kp C          &kp D       &kp V          &kp K  &kp H        &kp COMMA    &kp DOT     &kp FSLH
+	           &lt MSE ESC  &lt NAV SPACE  &lt MED TAB                       &lt FUN RET  &lt NUM BSPC &lt SYM DEL
             >;
         };
         game_layer {
