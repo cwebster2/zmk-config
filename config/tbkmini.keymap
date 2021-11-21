@@ -3,12 +3,13 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NUM 1
-#define SYM 2
-#define FUN 3
-#define NAV 4
-#define MSE 5
-#define MED 6
+#define GAME 1
+#define NUM 2
+#define SYM 3
+#define FUN 4
+#define NAV 5
+#define MSE 6
+#define MED 7
 
 &lt {
   tapping-term-ms = <300>;
@@ -44,6 +45,14 @@
 	           &lt MSE ESC   &lt NAV SPACE   &lt MED TAB         &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
             >;
         };
+        game_layer {
+            bindings = <
+	&kp Q      &kp W      &kp F       &kp P       &kp B          &kp J &kp L       &kp U       &kp Y      &kp SQT
+	&kp A      &kp R      &kp S       &kp T       &kp G          &kp M &kp N       &kp E       &kp I      &kp O
+	&kp Z      &kp X      &kp C       &kp D       &kp V          &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH
+	           &hm CTRL ESC   &lt NUM SPACE   &hm ALT TAB        &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
+            >;
+        };
         num_layer {
             bindings = <
 	&kp RBKT   &kp N7     &kp N8      &kp N9      &kp LBKT       &kp K_LOCK &trans    &trans    &trans   &reset
@@ -62,9 +71,9 @@
         };
         fun_layer {
             bindings = <
-	&kp F12 &kp F7 &kp F8 &kp F9 &kp SYSREQ        &kp K_LOCK &trans  &trans     &trans   &reset
+	&kp F12 &kp F7 &kp F8 &kp F9 &kp SYSREQ        &kp K_LOCK &trans  &trans     &trans   &bootloader
 	&kp F11 &kp F4 &kp F5 &kp F6 &kp PRINTSCREEN   &trans &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI
-	&kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans &trans  &trans &trans &trans
+	&kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans &trans  &trans &trans &tog GAME
 	                  &kp K_APP   &kp SPACE   &kp TAB     &trans &trans &trans
             >;
         };
@@ -86,7 +95,7 @@
         };
         med_layer {
             bindings = <
-	&reset   &trans   &trans    &trans     &kp K_LOCK   &trans &trans     &trans       &trans       &trans
+	&bootloader   &trans   &trans    &trans     &kp K_LOCK   &trans &trans     &trans       &trans       &trans
 	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT
 	&trans   &trans   &trans    &trans     &trans       &trans &trans     &trans       &trans       &trans
 	                  &trans   &trans   &trans                 &kp K_STOP2 &kp K_PP &kp K_MUTE
