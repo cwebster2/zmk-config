@@ -50,7 +50,7 @@
 	&kp Q      &kp W      &kp F       &kp P       &kp B          &kp J &kp L       &kp U       &kp Y      &kp SQT
 	&kp A      &kp R      &kp S       &kp T       &kp G          &kp M &kp N       &kp E       &kp I      &kp O
 	&kp Z      &kp X      &kp C       &kp D       &kp V          &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH
-	           &hm CTRL ESC   &lt NUM SPACE   &hm ALT TAB        &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
+	           &hm LCTRL ESC   &lt NUM SPACE   &hm LALT TAB        &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
             >;
         };
         num_layer {
