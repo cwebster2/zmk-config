@@ -32,6 +32,6 @@ Thumb PCB Pins
 C2, C4, C5, R6
 ```
 
-![Drag Racing](assets/pro-micro-pins-labelled.png)
+![Labelled Pro Micro pins](assets/pro-micro-pins-labelled.png)
 
 image from https://zmk.dev/docs/development/boards-shields-keymaps
