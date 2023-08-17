@@ -1,2 +1,2 @@
-board: [ "nice_nano", "nice_nano_v2" ]
+board: [ "nice_nano" ]
 shield: [ "tbkmini_left", "tbkmini_right" ]
