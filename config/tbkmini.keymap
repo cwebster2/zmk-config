@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define GAME 1
 #define NUM 2
 #define SYM 3
 #define FUN 4
@@ -32,25 +31,12 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-    lm: left_hand_positional_hold_tap {
-      compatible = "zmk,behavior-hold-tap";
-      label = "LEFT_HOMEROW_MODS";
-      #binding-cells = <2>;
-      flavor = "tap-unless-interrupted";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <200>;
-      bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
-    };
-    rm: right_hand_positional_hold_tap {
-      compatible = "zmk,behavior-hold-tap";
-      label = "RIGHT_HOMEROW_MODS";
-      #binding-cells = <2>;
-      flavor = "tap-unless-interrupted";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <200>;
-      bindings = <&kp>, <&kp>;
-      hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
+    u_caps_word: u_caps_word {
+      compatible = "zmk,behavior-mod-morph";
+      label = "u_caps_word";
+      #binding-cells = <0>;
+      bindings = <&caps_word>, <&kp CAPS>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
 
@@ -63,14 +49,6 @@
 	&hm LGUI A &hm LALT R   &hm LCTRL S    &hm LSHFT T &kp G          &kp M  &hm RSHFT N  &hm RCTRL E  &hm LALT I  &hm RGUI O
 	&kp Z      &kp X        &kp C          &kp D       &kp V          &kp K  &kp H        &kp COMMA    &kp DOT     &kp FSLH
 	           &lt MSE ESC  &lt NAV SPACE  &lt MED TAB                       &lt FUN RET  &lt NUM BSPC &lt SYM DEL
-            >;
-        };
-        game_layer {
-            bindings = <
-	&kp Q        &kp W      &kp F       &kp P       &kp B          &kp J &kp L       &kp U       &kp Y      &kp SQT
-	&mt LSHIFT A &kp R      &kp S       &kp T       &kp G          &kp M &kp N       &kp E       &kp I      &kp O
-	&mt LCTRL Z  &kp X      &kp C       &kp D       &kp V          &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH
-	           &lt NUM ESC  &kp SPACE   &hm LALT TAB        &lt FUN RET  &lt NUM BSPC  &lt SYM DEL
             >;
         };
         num_layer {
@@ -93,14 +71,14 @@
             bindings = <
 	&kp F12 &kp F7 &kp F8 &kp F9 &kp SYSREQ        &kp K_LOCK &trans  &trans     &trans   &bootloader
 	&kp F11 &kp F4 &kp F5 &kp F6 &kp PRINTSCREEN   &trans &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI
-	&kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans &trans  &trans &trans &tog GAME
+	&kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK   &trans &trans  &trans &trans &trans
 	                  &kp K_APP   &kp SPACE   &kp TAB     &trans &trans &trans
             >;
         };
         nav_layer {
             bindings = <
 	&sys_reset   &trans   &trans    &trans     &kp K_LOCK   &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_AGAIN
-	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp CAPS
+	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &u_caps_word
 	&trans   &trans   &trans    &trans     &trans       &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &kp INS
 	                  &trans   &trans   &trans                 &kp RET &kp BSPC &kp DEL
             >;
