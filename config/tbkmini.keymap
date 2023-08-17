@@ -3,12 +3,12 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NUM 2
-#define SYM 3
-#define FUN 4
-#define NAV 5
-#define MSE 6
-#define MED 7
+#define NUM 1
+#define SYM 2
+#define FUN 3
+#define NAV 4
+#define MSE 5
+#define MED 6
 
 &lt {
   tapping-term-ms = <300>;
