@@ -16,6 +16,10 @@
   flavor = "hold-preferred";
 };
 
+&caps_word {
+  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+}
+
 / {
   chosen {
     zmk,matrix_transform = &skeletyl_transform;
