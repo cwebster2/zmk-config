@@ -75,7 +75,7 @@
         };
         num_layer {
             bindings = <
-	&kp RBKT   &kp N7     &kp N8      &kp N9      &kp LBKT       &kp K_LOCK &trans    &trans    &trans   &reset
+	&kp RBKT   &kp N7     &kp N8      &kp N9      &kp LBKT       &kp K_LOCK &trans    &trans    &trans   &sys_reset
 	&kp SEMI   &kp N4     &kp N5      &kp N6      &kp EQUAL      &trans     &kp RSHFT &kp RCTRL &kp LALT &kp RGUI
 	&kp GRAVE  &kp N1     &kp N2      &kp N3      &kp BSLH       &trans     &trans    &trans    &trans   &trans
 	           &kp DOT       &kp N0          &kp MINUS           &trans &trans &trans
@@ -83,7 +83,7 @@
         };
         sym_layer {
             bindings = <
-	&kp RBRC  &kp AMPS &kp STAR  &kp LPAR  &kp LBRC        &kp K_LOCK &trans  &trans     &trans   &reset
+	&kp RBRC  &kp AMPS &kp STAR  &kp LPAR  &kp LBRC        &kp K_LOCK &trans  &trans     &trans   &sys_reset
 	&kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS        &trans &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI
 	&kp TILDE &kp EXCL &kp AT    &kp HASH  &kp PIPE        &trans &trans  &trans &trans &trans
 	                  &kp LPAR  &kp RPAR   &kp UNDER              &trans &trans &trans
@@ -99,7 +99,7 @@
         };
         nav_layer {
             bindings = <
-	&reset   &trans   &trans    &trans     &kp K_LOCK   &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_AGAIN
+	&sys_reset   &trans   &trans    &trans     &kp K_LOCK   &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_AGAIN
 	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp CAPS
 	&trans   &trans   &trans    &trans     &trans       &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &kp INS
 	                  &trans   &trans   &trans                 &kp RET &kp BSPC &kp DEL
@@ -107,7 +107,7 @@
         };
         mse_layer {
             bindings = <
-	&reset   &trans   &trans    &trans     &kp K_LOCK   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+	&sys_reset   &trans   &trans    &trans     &kp K_LOCK   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 	&kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans       &trans &trans &trans &trans &trans
 	&trans   &trans   &trans    &trans     &trans       &trans &trans &trans &trans &bt BT_CLR
 	                  &trans   &trans   &trans                 &trans &trans &trans
